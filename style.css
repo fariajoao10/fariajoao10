@@ -1,5 +1,7 @@
-body
+.cabecalho
 {
+    white-space: 20%;
     background-color: #383D58;
-    color: white;
+    color: rgb(252, 252, 252);
+    display: flex;
 }
