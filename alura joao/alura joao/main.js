@@ -21,7 +21,6 @@ const textos = document.querySelectorAll(".aba-conteudo");
         const tempoObjetivo4 = new Date("2024-02-01T00:00:00");
         const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
 
-        contadores[0].textContent = calculaTempo(tempoObjetivo1);
         contadores[0].textContent = calculaTempo(tempos[0]);
         contadores[1].textContent = calculaTempo(tempoObjetivo2);
         contadores[2].textContent = calculaTempo(tempoObjetivo3);
@@ -43,7 +42,8 @@ const textos = document.querySelectorAll(".aba-conteudo");
             if (tempoFinal > 0){
                 return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
             } else {
-                return "Prazo Finalizado";
+        
+                return "prazo finalizado";
             }
             return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
             }
@@ -57,6 +57,7 @@ const textos = document.querySelectorAll(".aba-conteudo");
                 contadores[i].textContent = calculaTempo(tempos[i]);   
             }
         }
+        
         function comecaCronometro(){
             atualizaCronometro();
             setInterval(atualizaCronometro, 1000);
